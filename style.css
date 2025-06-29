@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;600;700&display=swap');
+
+body {
+    font-family: 'Prompt', sans-serif;
+    background: linear-gradient(135deg, #dbe9f4, #fef6e4); /* ฟ้าอ่อน+ครีม */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    max-width: 650px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    backdrop-filter: blur(8px);
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.6rem;
+    color: #ff7f50; /* coral สวย */
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+.expense-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.expense-item {
+    display: flex;
+    justify-content: space-between;
+    background: #ffffffcc; /* ขาวโปร่ง */
+    padding: 18px 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.expense-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.expense-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.expense-amount {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #2b6777; /* ฟ้าน้ำทะเล */
+}
+
+.total {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #ff7f50, #fdbb2d); /* coral-ทอง */
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* สำหรับจอใหญ่เช่น iPhone 15 Pro Max */
+@media (max-width: 940px) {
+    .container {
+        padding: 30px;
+        max-width: 90%;
+    }
+    h1 {
+        font-size: 2.2rem;
+    }
+    .expense-item {
+        padding: 15px 20px;
+    }
+    .expense-name,
+    .expense-amount {
+        font-size: 1.1rem;
+    }
+    .total {
+        font-size: 1.4rem;
+        padding: 18px;
+    }
+}
+
+/* สำหรับจอเล็กมาก เช่น iPhone SE */
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+    h1 {
+        font-size: 1.8rem;
+    }
+    .expense-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    .expense-name,
+    .expense-amount {
+        font-size: 1rem;
+    }
+    .total {
+        font-size: 1.2rem;
+        padding: 15px;
+    }
+}
